@@ -1,0 +1,188 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Layout.master.cs" Inherits="Layout" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>電子書包學習平台</title>
+    <script type="text/javascript" src="<%= Page.ResolveUrl(@"~/js/jquery-1.6.3.min.js") %>"></script>
+    <script type="text/javascript" src="<%= Page.ResolveUrl(@"~/js/jquery.validate.js") %>"></script>
+    <script type="text/javascript" src="<%= Page.ResolveUrl(@"~/js/jquery.metadata.js") %>"></script>
+    <script type="text/javascript" src="<%= Page.ResolveUrl(@"~/js/ui.datepicker.js") %>"></script>
+    <script type="text/javascript" src="<%= Page.ResolveUrl(@"~/js/ui.datepicker-zh-TW.js") %>"></script>
+    <script type="text/javascript" src="<%= Page.ResolveUrl(@"~/js/jcarousellite_1.0.1.js") %>"></script>
+    <script type="text/javascript" src="<%= Page.ResolveUrl(@"~/js/jquery.mousewheel.js") %>"></script>
+    <script type="text/javascript" src="<%= Page.ResolveUrl(@"~/js/jquery.em.js") %>"></script>
+    <script type="text/javascript" src="<%= Page.ResolveUrl(@"~/js/jScrollPane.js") %>"></script>
+    <script type="text/javascript" src="<%= Page.ResolveUrl(@"~/js/jquery.tinyscrollbar.min.js") %>"></script>
+    <script type="text/javascript" src="<%= Page.ResolveUrl(@"~/js/pagecode.js") %>"></script>
+    <link href="<%= Page.ResolveUrl(@"~/css/default.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Page.ResolveUrl(@"~/css/jquery_validate.css") %>" rel="stylesheet"
+        type="text/css" />
+    <link href="<%= Page.ResolveUrl(@"~/css/ui.core.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Page.ResolveUrl(@"~/css/ui.datepicker.css") %>" rel="stylesheet"
+        type="text/css" />
+    <link href="<%= Page.ResolveUrl(@"~/css/ui.theme.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Page.ResolveUrl(@"~/css/single_seventeen.css") %>" rel="stylesheet"
+        type="text/css" />
+    <link href="<%= Page.ResolveUrl(@"~/css/pagination.css") %>" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("form").validate({ meta: "validate" });
+            $(".paint").tinyscrollbar();
+        });
+           
+            
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="wrap">
+        <!-- 表頭 開始 -->
+        <div class="header">
+        </div>
+        <!-- 表頭 結束 -->
+        <!--主內容 開始 -->
+        <div class="content ">
+            <!--左邊選單 開始 -->
+            <div class="leftmenu">
+                <div class="leftmenu_box">
+                    <div class="leftmenu_dragbox" style="left: 0">
+                        <div class="leftmenu_left pngfix">
+                            <div class="leftmenu_in">
+                                <h1>
+                                    <span>電子書包學習平台</span></h1>
+                                <div class="student_box">
+                                    <p>
+                                        <asp:label id="schoolName" runat="server"></asp:label>
+                                    </p>
+                                    <div class="s1">
+<a href="
+
+<%= Page.ResolveUrl(@"~/DilasUser/Person/Person_DataEdit.aspx") %>
+">
+                                        <div class="s1_1">
+                                        </div>
+  </a>
+                                        <div class="s1_2">
+                                            
+                                                <asp:image id="myPhoto" runat="server" />
+                                          
+                                        </div>
+                                    </div>
+                                    <p>
+                                          <asp:label id="GradeName" runat="server"></asp:label><asp:label id="name" runat="server"></asp:label>
+                                        <span style="display:none" > <asp:label id="lblseatNumber" runat="server" text="座號：" visible="false"><asp:label id="seatNumber" runat="server"></asp:label>號</asp:label></span>
+                                     
+
+                                    </p>
+                                </div>
+                                <!--選單 開始 -->
+                                <div class="site_tab">
+                                    <a class="back prev" href="#"></a>
+                                    <div class="photo_list">
+                                        <h1 style="display: none">
+                                            <asp:image id="imgH1" runat="server" imageurl="~/img/h1_teacher.jpg" />
+                                        </h1>
+                                        <div class="scrollable">
+                                            <ul>
+                                                <!-- 教師選單 -->
+                                                <asp:panel id="pnlteacher" runat="server" visible="false">
+     <li><a href="<%= Page.ResolveUrl(@"~/DilasUser/ContactBook/ContactBook_detail.aspx") %>" class="teacher_1"></a></li>
+        <li><a href="<%= Page.ResolveUrl(@"~/DilasUser/Grade/SelectGrade.aspx") %>" class="teacher_2"></a></li>  
+        <li><a href="<%= Page.ResolveUrl(@"~/DilasUser/BookCase/BookCase_List.aspx") %>" class="teacher_3"></a></li>
+        <li><a href="<%= Page.ResolveUrl(@"~/DilasUser/PrepareLesson/SelectGrade.aspx") %>" class="teacher_edit" title="教師備課"></a></li>
+        <li><a href="<%= Page.ResolveUrl(@"~/DilasUser/SchoolNews/SchoolNews_List.aspx?ModuleID=B01") %>" class="school_1"></a></li>
+        <li><a href="<%= Page.ResolveUrl(@"~/DilasUser/Discusses/Discusses_SelectGrade.aspx?ModuleID=C01") %>" class="lmenu_2" title="班級塗鴉牆"></a></li>
+
+
+        
+    </asp:panel>
+                                                <!-- 學生選單 -->
+                                                <asp:panel id="pnlStudent" runat="server" visible="false">
+<li><a href="<%= Page.ResolveUrl(@"~/DilasUser/Discusses/Discusses_Students_List.aspx?ModuleID=C01") %>" class="lmenu_2" title="班級塗鴉牆"></a></li>
+
+ <li><a href="<%= Page.ResolveUrl(@"~/DilasUser/PrepareLesson/TodayLesson.aspx") %>" class="student_day" title="本日課表"></a></li>
+    <li><a href="<%= Page.ResolveUrl(@"~/DilasUser/BookCase/BookCase_List.aspx") %>" class="teacher_3"></a></li>
+      
+
+
+ <li><a href="<%= Page.ResolveUrl(@"~/DilasUser/ContactBook/ContactBook_ForStudent.aspx") %>" class="student_2"></a></li>  
+        <li><a href="<%= Page.ResolveUrl(@"~/DilasUser/Grade/AddressBook.aspx") %>" class="teacher_2"></a></li>
+ <li><a href="<%= Page.ResolveUrl(@"~/DilasUser/Grade/GradeTimeTable.aspx") %>" class="student_1"></a></li>
+       
+
+<li><a href="<%= Page.ResolveUrl(@"~/DilasUser/SchoolNews/SchoolNews_List.aspx?ModuleID=B01") %>" class="school_1" title="學校公告"></a></li>
+
+    </asp:panel>
+                                                <!-- 家長選單 -->
+                                                <asp:panel id="pnlParent" runat="server" visible="false">
+      
+           <li> <a href="<%= Page.ResolveUrl(@"~/DilasUser/ContactBook/ContactBook_SelectChildren.aspx") %>" class="student_2" title="家庭聯絡簿" ></a><br/><a
+                class="a4" style="top: 0px; left: 150px; display: none" title="家庭聯絡簿" href="/my/examines">
+            </a></li>
+            <li><a href="<%= Page.ResolveUrl(@"~/DilasUser/SchoolNews/SchoolNews_List.aspx?ModuleID=B01") %>" class="school_1" title="學校公告" ></a></li>
+  
+
+    </asp:panel>
+                                                <!-- 校管選單 -->
+                                                <asp:panel id="pnlSchoolAdmin" runat="server" visible="false">
+<li><a title="學校公告" href="<%= Page.ResolveUrl(@"~/DilasAdmin/News/News_List.aspx?ModuleID=B01") %>" class="school_1"></a></li>
+
+
+        <li><a href="<%= Page.ResolveUrl(@"~/DilasAdmin/Grade/Grade_List.aspx") %>" class="admin_2"></a></li>  
+          <li><a href="<%= Page.ResolveUrl(@"~/DilasAdmin/Student/Student_List.aspx") %>" class="admin_3"></a></li>
+<li><a title="家長管理" href="<%= Page.ResolveUrl(@"~/DilasAdmin/Parent/Parent_List.aspx") %>" class="admin_4"></a></li>
+<li><a title="教師管理"  href="<%= Page.ResolveUrl(@"~/DilasAdmin/Teacher/Teacher_List.aspx") %>" class="admin_5"></a></li>
+<li><a title="課程管理" href="<%= Page.ResolveUrl(@"~/DilasAdmin/CourseSubject/CourseSubject_List.aspx") %>" class="admin_6"></a></li>
+
+
+    </asp:panel>
+                                                <!-- 總管選單 -->
+                                                <asp:panel id="pnlAdministrator" runat="server" visible="false">
+   
+       <li><a href="<%= Page.ResolveUrl(@"~/DilasAdmin/School/School_List.aspx") %>" class="admin_1"></a></li>
+        <li><a href="<%= Page.ResolveUrl(@"~/DilasAdmin/Grade/Grade_List.aspx") %>" class="admin_2"></a></li>  
+        <li><a href="<%= Page.ResolveUrl(@"~/DilasAdmin/Student/Student_List.aspx") %>" class="admin_3"></a></li>
+        <li><a href="<%= Page.ResolveUrl(@"~/DilasAdmin/Parent/Parent_List.aspx") %>" class="admin_4"></a></li>
+        <li><a href="<%= Page.ResolveUrl(@"~/DilasAdmin/Teacher/Teacher_List.aspx") %>" class="admin_5"></a></li>
+    
+
+
+      
+    </asp:panel>
+   <li><asp:LoginStatus ID="LoginStatus1" runat="server" 
+            LogoutText="" onloggingout="LoginStatus1_LoggingOut" CssClass="logout_1" /></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a class="next" href="#"></a>
+                                    <div class="clear">
+                                    </div>
+                                </div>
+                                <!--選單 結束 -->
+                            </div>
+                        </div>
+                        <div class="leftmenu_right pngfix">
+<img class="jquery_img" src="<%= Page.ResolveUrl(@"~/images/dot_light.png") %>">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--左邊選單 結束 -->
+            <!--右方內容 開始 -->
+            <div class="main">
+                <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+
+  </asp:contentplaceholder>
+                <!--右方內容結束 -->
+                <div class="clear">
+                </div>
+            </div>
+            <!--主內容 結束 -->
+        </div>
+    </div>
+    </form>
+</body>
+</html>
